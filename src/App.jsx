@@ -7,7 +7,6 @@ function App() {
       <Routes>
         <Route path="/">Home</Route>
         <Route path="/mammals" element={<Mammals />}></Route>
-        <Route path="/birds" element={<Mammals />}></Route>
       </Routes>
     </>
   )
