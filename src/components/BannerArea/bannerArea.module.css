@@ -1,0 +1,19 @@
+.container {
+    background-image: url('../../assets/banner_bg.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.overlay .container {
+    background-color: rgba(42, 41, 41, 0.4);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+
+}
+
+.content {
+    height: 600px;
+}

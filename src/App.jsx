@@ -1,12 +1,18 @@
 import { Route,Routes } from "react-router-dom"
+import Layout from "./components/Layout"
 import Mammals from "./components/Mammals"
 
 function App() {
     return (
     <>
+    
       <Routes>
-        <Route path="/">Home</Route>
-        <Route path="/mammals" element={<Mammals />}></Route>
+        <Route element={<Layout />}>
+        <Route path='/'>Home</Route>
+        <Route path='/mammals' element={<Mammals />}></Route>
+        <Route path='/birds' element={<Mammals />}></Route>
+        <Route path='/reptiles' element={<Mammals />}></Route>
+        </Route>
       </Routes>
     </>
   )
