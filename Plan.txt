@@ -1,0 +1,17 @@
+create header component 
+create Navigation component
+create footer component
+
+Give link to all Routes
+
+create Main component to display welcome message
+    
+
+Create sidebar component
+    state to define the page to display the sidebar 
+    state to define the page to show welcome message 
+           to display corresponding short message of the animal 
+    onclick function on each sidebar menu 
+            to change the state 
+        
+        

@@ -1,0 +1,14 @@
+.nav_menu {
+    text-decoration: none;
+    color: #036331;
+    margin: 8px 32px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    justify-content: end;
+}
+
+.nav_menu:hover {
+    color: #373D20;
+    transform: scale(1.05);
+    text-transform: uppercase;
+}

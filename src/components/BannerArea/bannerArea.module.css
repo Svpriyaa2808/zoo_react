@@ -1,0 +1,25 @@
+.container {
+    background-image: url('../../assets/banner_bg1.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+}
+
+.banner {
+    height: 600px;
+}
+
+.content  {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    width: 400px;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
