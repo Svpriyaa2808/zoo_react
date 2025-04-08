@@ -2,6 +2,7 @@ import BannerArea from '../BannerArea'
 import styles from './header.module.css'
 import  logo from '../../assets/logo.png'
 import DesktopNavigation from '../Navigation/DesktopNavigation'
+import ImageSlide from '../ImageSlide'
 
 const Header = () => {
     return (
@@ -16,6 +17,7 @@ const Header = () => {
             </div>
         </header>
         <BannerArea />
+        
         </>
     )
 }
