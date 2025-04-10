@@ -8,10 +8,23 @@ create Main component to display welcome message
     
 
 Create sidebar component
-    state to define the page to display the sidebar 
-    state to define the page to show welcome message 
-           to display corresponding short message of the animal 
-    onclick function on each sidebar menu 
-            to change the state 
-        
-        
+  
+create state in App.jsx to show description when it is clicked
+       const [showDescription,setShowDescription] = useState(null)
+       App.jsx -> Home -> sidebar 
+                       -> Maincontent
+       in sidebar create Onclick function and set setShowDescription(item)
+
+To hide welcome message 
+       create state in Maincontnet
+       const [showShortDescription,setShowShortDescription] = useState(null)
+       
+       useEffect is used when sidebar state gets value
+         useEffect(()=> {
+        setShowShortDescription(variable that holding sidebar state)
+       },[variable that holding sidebar state])
+
+To make class Active and remove active when it is clicked again
+       create state in sidebar 
+       const [classActive,setClassActive] = useState(null)
+       In onClick function set the class active "setClassActive(classActive === item ? null : item)"
