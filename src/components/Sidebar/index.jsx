@@ -1,18 +1,25 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import styles from "./sidebar.module.css"
-import { AnimalName } from "../../data/data"
 
-const Sidebar = ({animalNameClick}) => {
-    console.log(AnimalName)
+
+const Sidebar = ({animalNameClick,animalName}) => {
+    const [classActive,setClassActive] = useState(null)
     
-      
+    const handleClick = (item) => {
+        animalNameClick(item)
+        setClassActive(classActive === item ? null : item)
+    }
+
    
+
     return (
+        <>
         <div className={styles.sidebar}>
-            {AnimalName.map((item,index)=> (
-                <p key={index} className={styles.animal_name} onClick={()=>animalNameClick(item)}>{item}</p>
+            {animalName.map((item,index)=> (
+                <p key={index} className={`${styles.animal_name} ${classActive === item ? styles.active : ""}`} onClick={()=>handleClick(item)}>{item}</p>
             ))}
         </div>
+        </>
     )
 }
 

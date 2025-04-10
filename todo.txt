@@ -1,0 +1,4 @@
+give proper style to active classes
+Align the content in welcomemessage and animal description
+Mediaquery for all
+want to change NavLink in main component - try by creating separate component

@@ -1,8 +1,39 @@
 .sidebar {
+    margin: 16px;
     flex-basis: 25%;
-
+    box-shadow: 2px 2px 2px 2px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    background-image: url('../../assets//main_bg.jpeg')
 }
 
 .animal_name {
+    margin: 16px;
+    font-size: 1.2rem;
     color: black;
+    cursor: pointer;
+}
+
+.animal_name::after {
+    background-color: #036331;
+    content: "";
+    margin-top: 4px;
+    display: block;
+    height: 2px;
+    width: 50%;
+    transition: all .3s;
+    transform: scale(0);
+}
+
+.animal_name:hover {
+    text-transform: uppercase;
+}
+
+.animal_name:hover::after {
+    transform: scale(1.05);
+    text-transform: uppercase;
+}
+
+.active {
+    background-color: aqua;
 }
