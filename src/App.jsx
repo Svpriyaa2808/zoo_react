@@ -1,5 +1,5 @@
 import { Route,Routes } from "react-router-dom"
-import Layout from "./components/Layout"
+import Layout from "./pages/Layout"
 import Mammals from "./components/Mammals"
 
 function App() {

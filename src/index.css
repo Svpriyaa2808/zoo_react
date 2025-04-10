@@ -18,3 +18,12 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.container {
+  flex-grow: 1;
+}
+
+.main_content {
+  display: flex;
+}
+

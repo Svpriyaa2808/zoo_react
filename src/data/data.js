@@ -128,6 +128,12 @@ const allAnimals = [...mammals, ...birds, ...reptiles]; //spread operator
 
 export {allAnimals,mammals,birds,reptiles, homeContent,mammalsContent,birdsContent, reptilesContent};
 
-export const uniqueCategories = [...new Set(allAnimals.map(item => item.type))]
+export const Categories = [...new Set(allAnimals.map(item => item.type))]
 
+export const AnimalName = [...new Set(allAnimals.map(item => item.name))]
 
+export const AnimalShortDescription = (animal) => {
+    return (allAnimals.filter(item => item.name === animal))
+}
+
+console.log(AnimalShortDescription("Echidna"))
