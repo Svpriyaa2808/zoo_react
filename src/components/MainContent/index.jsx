@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import styles from './mainContent.module.css'
 import { getIconUrl } from '../../utils/function'
-import { NavLink } from 'react-router-dom'
+import { NavLink , useLocation} from 'react-router-dom'
 
 const MainContent = ({animalDescription,animalDetails,contentArray}) => {
     const [showShortDescription,setShowShortDescription] = useState(null)
@@ -16,6 +16,9 @@ const MainContent = ({animalDescription,animalDetails,contentArray}) => {
         setShowShortDescription(animalDescription)
     },[animalDescription])
 
+    const location = useLocation()
+    const isHome = location.pathname === '/'
+
     return (
         <div className={styles.main_description}>
             {!showShortDescription  && !animalDescription &&
@@ -29,10 +32,12 @@ const MainContent = ({animalDescription,animalDetails,contentArray}) => {
             {showShortDescription && animalDescription && 
                 (animalDetails.map((item,index)=>
                     <div key={index} className={styles.animal_container}>
-                        <img src={getIconUrl(item.icon)} alt={item.icon}></img>
-                        <h3>{item.name}</h3>
-                        <p>{item.description.length > 200 ? item.description.slice(0,200) + "...." : item.description}</p>
-                <NavLink to={item.type} onClick={handleClick}>visit {item.type} Page</NavLink>
+                        <img className={styles.animal_icon} src={getIconUrl(item.icon)} alt={item.icon}></img>
+                        <h3 className={styles.animal_name}>{item.name}</h3>
+                        <p className={styles.animal_description}>{item.description.length > 200 ? item.description.slice(0,200) + "...." : item.description}</p>
+                        {isHome  ? <NavLink to={`/${item.type}`} onClick={handleClick}>visit {item.type} Page</NavLink> : 
+                                            <NavLink to={`${item.type}/${item.name}`}>Vist {item.name }</NavLink> }
+                
                 </div>))
                 
             }

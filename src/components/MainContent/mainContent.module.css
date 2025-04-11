@@ -1,10 +1,9 @@
 .main_description {
-    margin: 16px;
-    margin-left: 0;
+   margin: 0;
     flex-basis: 75%;
     box-shadow: 2px 2px 2px 2px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    background-color: rgba(185, 201, 179);
+    opacity: 1;
 }
 
 .heading {
@@ -14,4 +13,22 @@
 .animal_container img {
     width: 25%;
     height: auto;
+}
+
+.animal_container {
+    margin: 48px;
+    max-width: 600px;
+    place-items: center;
+    border: 5px solid #036331;
+    border-radius: 25px;
+}
+
+.animal_icon {
+    margin-left: 35%;
+}
+
+.animal_description {
+    font-size: 18px;
+    text-indent: 30px;
+    line-height: 25px;
 }
