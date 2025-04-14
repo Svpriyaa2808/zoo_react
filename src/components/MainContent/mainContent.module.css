@@ -1,9 +1,9 @@
 .main_description {
-   margin: 0;
+    margin: 0;
     flex-basis: 75%;
     box-shadow: 2px 2px 2px 2px;
-    background-color: rgba(185, 201, 179);
-    opacity: 1;
+    /* background-color: rgba(185, 201, 179); */
+    color: white;
 }
 
 .heading {
@@ -16,19 +16,50 @@
 }
 
 .animal_container {
-    margin: 48px;
+    background-color: black;
+    margin:  48px;
+    margin-left: 10%;
     max-width: 600px;
-    place-items: center;
-    border: 5px solid #036331;
+    /* place-items: center; */
     border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px;
+    min-height: 450px;
 }
 
 .animal_icon {
     margin-left: 35%;
+    animation: oscillateX 3s ease-in-out infinite;
+}
+
+.animal_name {
+    padding: 16px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .animal_description {
+    margin: 8px;
     font-size: 18px;
     text-indent: 30px;
     line-height: 25px;
 }
+
+.link {
+    margin: 48px;
+    text-align: center;
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+@keyframes oscillateX {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(20px); }
+    50% { transform: translateX(30px); }
+    75% { transform: translateX(20px); }
+    100%   { transform: translateX(0); }
+  }

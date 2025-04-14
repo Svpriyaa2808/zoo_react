@@ -25,5 +25,9 @@ body {
 
 .main_content {
   display: flex;
+  background-image: url('../src/assets/white_flamingo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 

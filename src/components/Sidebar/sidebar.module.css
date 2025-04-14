@@ -4,7 +4,7 @@
     box-shadow: 2px 2px 2px 2px ;
     /* border-bottom-left-radius: 25px;
     border-top-left-radius: 25px; */
-    background-image: url('../../assets/main_bg.jpeg');
+    /* background-image: url('../../assets/main_bg.jpeg'); */
    
 }
 
@@ -28,30 +28,14 @@
     font-weight: 700;
 }
 
-.animal_name::after {
-    background-color: #036331;
-    content: "";
-    margin-top: 4px;
-    display: block;
-    height: 2px;
-    width: 100%;
-    text-align: center;
-    transition: all .3s;
-    transform: scale(0);
-}
-
 .animal_name:hover {
     text-transform: uppercase;
 }
 
-.animal_name:hover::after {
-    transform: scale(1);
-}
-
 .active {
-    background-color: rgba(185, 201, 179);
+    background-color: black;
     opacity: 1;
-    color: #036331;
+    color: white;
     border-radius: 10px;
     max-height: 50px;
     margin: 8px;

@@ -32,11 +32,17 @@ const MainContent = ({animalDescription,animalDetails,contentArray}) => {
             {showShortDescription && animalDescription && 
                 (animalDetails.map((item,index)=>
                     <div key={index} className={styles.animal_container}>
-                        <img className={styles.animal_icon} src={getIconUrl(item.icon)} alt={item.icon}></img>
                         <h3 className={styles.animal_name}>{item.name}</h3>
+                        <img className={styles.animal_icon} src={getIconUrl(item.icon)} alt={item.icon}></img>
                         <p className={styles.animal_description}>{item.description.length > 200 ? item.description.slice(0,200) + "...." : item.description}</p>
-                        {isHome  ? <NavLink to={`/${item.type}`} onClick={handleClick}>visit {item.type} Page</NavLink> : 
-                                            <NavLink to={`${item.type}/${item.name}`}>Vist {item.name }</NavLink> }
+                        
+                        {isHome  ? <div className={styles.link}>To Know about more {item.type} 
+                                    <p><NavLink to={`/${item.type}`} onClick={handleClick}> visit {item.type} Page</NavLink></p>
+                                    </div>
+                                : <div className={styles.link}>To know about {item.name}
+                                    <p><NavLink to={`/${item.type}/${item.name}`}>Click here</NavLink></p> 
+                                </div>
+                        }
                 
                 </div>))
                 

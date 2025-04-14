@@ -4,14 +4,13 @@ import { getIconUrl } from "../../utils/function"
 getIconUrl
 
 const Sidebar = ({animalNameClick,animalName}) => {
+    console.log(animalName)
     const [classActive,setClassActive] = useState(null)
     
     const handleClick = (item) => {
         animalNameClick(item)
         setClassActive(classActive === item ? null : item)
     }
-
-   
 
     return (
         <>
