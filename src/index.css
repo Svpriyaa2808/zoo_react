@@ -31,3 +31,12 @@ body {
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width:700px) {
+
+  .main_content {
+    background-image: none;
+    position: relative;
+  }
+  
+}
+
