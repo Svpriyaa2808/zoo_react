@@ -23,3 +23,17 @@
     color: white;
     text-align: left;
 }
+
+@media screen and (max-width : 600px) {
+
+    .container {
+        background-position: center;
+    }
+
+    .content {
+        top: 45%;
+        left: 10%;
+        font-size: 3rem;
+    }
+    
+}
