@@ -135,14 +135,14 @@ export const Categories = [...new Set(allAnimals.map(item => item.type))]
 // export const AnimalName = [(allAnimals.map(item => item.name))]
 
 export const AnimalShortDescription = (animal) => {
-    return (allAnimals.filter(item => item.name === animal))
+    return (allAnimals.filter(item => item === animal))
 }
 
 export const AnimalName = (type) => {
     if(type === null ) {
-        return (allAnimals.map(item => item.name))
+        return (allAnimals.map(item => item))
     } else {
-        return (allAnimals.filter(item=> item.type === type).map(item => item.name))
+        return (allAnimals.filter(item=> item.type === type).map(item => item))
     }
     
 }

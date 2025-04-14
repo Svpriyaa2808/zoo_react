@@ -18,14 +18,14 @@ function App() {
     <>
     
       <Routes>
-        <Route element={<Layout />}>
+        <Route element={<Layout animalClick={handleClick}/>}>
         <Route path='/' element={<Home content={homeContent} animalClick={handleClick}
                                         sidebarName={AnimalName(null)} 
                                         description={showDescription} 
                                         details={AnimalShortDescription(showDescription)}/>}>
         </Route>
 
-        <Route path='/Mammals' element={<AnimalPage  sidebarName={AnimalName("Mammals")} 
+        {/* <Route path='/Mammals' element={<AnimalPage  sidebarName={AnimalName("Mammals")} 
                                                   description={showDescription} 
                                                   details={AnimalShortDescription(showDescription)}
                                                   content={mammalsContent}
@@ -44,9 +44,20 @@ function App() {
                                                   details={AnimalShortDescription(showDescription)}
                                                   content={reptilesContent}
                                                   animalClick={handleClick} />}>
-        </Route>
+        </Route> */}
+         <Route
+          path="/:type"
+          element={
+            <AnimalPage
+              animalClick={handleClick}
+              description={showDescription}
+              details={AnimalShortDescription(showDescription)}
+            />
+          }
+        />
+      </Route>
 
-        </Route>
+        
       </Routes>
     </>
   )

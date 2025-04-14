@@ -1,4 +1,6 @@
-give proper style to active classes
-Align the content in welcomemessage and animal description
+give proper style to active classes-  completed
+Align the content in welcomemessage and animal description - want to change content
 Mediaquery for all
-want to change NavLink in main component - try by creating separate component
+want to change NavLink in main component - completed
+
+usepackages to show animal full details

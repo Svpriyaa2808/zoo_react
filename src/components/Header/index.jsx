@@ -3,7 +3,7 @@ import styles from './header.module.css'
 import  logo from '../../assets/logo.png'
 import DesktopNavigation from '../Navigation/DesktopNavigation'
 
-const Header = () => {
+const Header = ({animalDes}) => {
     return (
         <>
         <header className={styles.header}>
@@ -12,7 +12,7 @@ const Header = () => {
             <h1 className={styles.page_title}>Nature's zoo</h1>
             </div>
             <div className={styles.navigation}>
-                <DesktopNavigation />
+                <DesktopNavigation hideAnimalContent={animalDes}/>
             </div>
         </header>
         <BannerArea />
