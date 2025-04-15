@@ -34,3 +34,54 @@
     text-align: center;
     flex: 1 0 60%;
 }
+
+@media screen and (max-width:800px) {
+    .title_section {
+        flex: 1 0 90%;
+    }
+
+    .page_title {
+        text-align: center;
+        margin-left: 10%;
+    }
+
+    .navigation {
+        flex: 1 0 10%;
+    }
+}
+
+@media screen and (max-width:700px) {
+
+    .header {
+        display: grid;
+        grid-template: 1fr/2fr 1fr;
+    }
+
+    .title_section {
+        margin-top: 16px;
+    }
+
+    .page_title {
+        margin-left: 56px;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width:600px) {
+   .title_section {
+    display: grid;
+    grid-template: 1fr / 1fr 2fr;
+   }
+
+   .logo {
+    width: 100%;
+    height: auto;
+   }
+
+   .page_title {
+    margin-left: 32px;
+    padding: 0;
+   }
+}

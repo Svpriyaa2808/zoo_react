@@ -12,3 +12,28 @@
     transform: scale(1.05);
     text-transform: uppercase;
 }
+
+.hamburger_menu {
+    display: none;
+}
+
+@media screen and (max-width:800px) {
+
+    .nav_menu {
+        display: none;
+    }
+
+    .hamburger_menu {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 20%;
+    }
+    
+}
+
+@media screen and (max-width:600px) {
+    .hamburger_menu {
+        right: 0;
+    }
+}

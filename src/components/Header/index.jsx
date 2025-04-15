@@ -2,6 +2,7 @@ import BannerArea from '../BannerArea'
 import styles from './header.module.css'
 import  logo from '../../assets/logo.png'
 import DesktopNavigation from '../Navigation/DesktopNavigation'
+import MobileNavigation from '../Navigation/MobileNavigation'
 
 const Header = ({animalDes}) => {
     return (
@@ -13,6 +14,7 @@ const Header = ({animalDes}) => {
             </div>
             <div className={styles.navigation}>
                 <DesktopNavigation hideAnimalContent={animalDes}/>
+                <MobileNavigation />
             </div>
         </header>
         <BannerArea />
