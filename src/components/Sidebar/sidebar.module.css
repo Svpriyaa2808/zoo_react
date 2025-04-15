@@ -2,10 +2,7 @@
    margin: 0;
     flex-basis: 25%;
     box-shadow: 2px 2px 2px 2px ;
-    /* border-bottom-left-radius: 25px;
-    border-top-left-radius: 25px; */
-    /* background-image: url('../../assets/main_bg.jpeg'); */
-   
+    padding: 16px;
 }
 
 .sidebar_menu {
@@ -17,8 +14,8 @@
 
 .animal_icon {
     margin: 8px 0;
-    width: 10%;
-    height:10%;
+    width: 15%;
+    height:15%;
 }
 
 .animal_name {
@@ -26,10 +23,11 @@
     font-size: 1.2rem;
     margin-left: 48px;
     font-weight: 700;
+    width: 150px;
 }
 
 .animal_name:hover {
-    text-transform: uppercase;
+    transform: scale(1.05)
 }
 
 .active {
@@ -40,4 +38,49 @@
     max-height: 50px;
     margin: 8px;
     box-shadow: 2px 2px 2px 2px;
+}
+
+@media  screen and (max-width:768px) {
+    .animal_name {
+        margin: 8px;
+    }   
+}
+
+@media screen and (max-width:700px) {
+    .sidebar {
+        flex-basis: 15%;
+        background-color: black
+    }
+
+    .sidebar_menu {
+        border-bottom: 2px solid white;
+        min-height: 60px;
+    }
+
+    .animal_name {
+        display: none;
+    }
+
+    .animal_icon {
+        width: 75%;
+        height: auto;
+    }
+
+    .active {
+        min-height: 70px;
+        min-width: 70px;
+    }
+      
+}
+
+@media screen and (max-width:400px) {
+    .animal_icon {
+        min-height: 50px;
+        min-width: 50px;
+    }
+
+    .active {
+        min-height: 50px;
+        min-width: 50px;
+    }
 }

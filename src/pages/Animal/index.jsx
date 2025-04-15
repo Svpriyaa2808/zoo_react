@@ -25,17 +25,17 @@ import { AnimalName } from "../../data/data";
 import { mammalsContent, birdsContent, reptilesContent } from "../../data/data";
 
 const AnimalPage = ({ animalClick, description, details }) => {
-  const { type } = useParams(); // 👈 get the dynamic part of the URL
+  const { type } = useParams(); 
 
   const contentMap = {
-    mammals: mammalsContent,
-    birds: birdsContent,
-    reptiles: reptilesContent
+    Mammals: mammalsContent,
+    Birds: birdsContent,
+    Reptiles: reptilesContent
   };
 
-  const content = contentMap[type.toLowerCase()];
+  const content = contentMap[type];
   console.log(content)
-  const sidebarName = AnimalName(type.charAt(0).toUpperCase() + type.slice(1));
+  const sidebarName = AnimalName(type);
 
   return (
     <div className="container">
