@@ -58,7 +58,7 @@
     
     .main_description {
         flex-basis: 85%;
-        background-image: url('../src/assets/white_flamingo.jpg');
+        background-image: url('../../assets/white_flamingo.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
