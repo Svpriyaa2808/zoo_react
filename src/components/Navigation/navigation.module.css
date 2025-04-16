@@ -19,21 +19,49 @@
 
 @media screen and (max-width:800px) {
 
-    .nav_menu {
+    .desktop_menu {
         display: none;
     }
 
     .hamburger_menu {
         display: block;
+    }
+
+    .mobile_menu {
         position: absolute;
-        right: 0;
-        top: 20%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-weight: bold;
+        left: 0;
+        background-color: white;
+        opacity: .8;
+        transition: all linear .3s;
+    }
+
+   .nav_menu {
+        font-weight: bold;
+   }
+
+    .inactive {
+        top: -200%;
+    }
+
+    .active {
+        padding: 16px;
+        min-height: 300px;
+        top: 100%;
     }
     
 }
 
 @media screen and (max-width:600px) {
     .hamburger_menu {
-        right: 0;
+        place-self: self-end;
+    }
+
+    .hamburger_menu img {
+        width: 75%;
+        height: auto;
     }
 }
