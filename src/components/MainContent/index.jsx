@@ -2,14 +2,23 @@ import { useEffect, useState } from 'react'
 import styles from './mainContent.module.css'
 import { getIconUrl } from '../../utils/function'
 import { NavLink , useLocation} from 'react-router-dom'
+import AnimalFullDetails from '../AnimalFullDetails'
+import AnimalDetails from '../../pages/AnimalDetails'
 
 const MainContent = ({animalDescription,animalDetails,contentArray}) => {
     const [showShortDescription,setShowShortDescription] = useState(null)
+    const [fullDetails,setFullDetails] = useState(null)
     console.log(contentArray)
 
     const handleClick = () => {
         setShowShortDescription(null)
         animalDescription(null)
+    }
+
+    const handleDetails = () => {
+        setFullDetails("show")
+        
+        
     }
 
     useEffect(()=> {
@@ -40,13 +49,15 @@ const MainContent = ({animalDescription,animalDetails,contentArray}) => {
                                     <p><NavLink to={`/${item.type}`} onClick={handleClick}> visit {item.type} Page</NavLink></p>
                                     </div>
                                 : <div className={styles.link}>To know about {item.name}
-                                    <p><NavLink to={`/${item.type}/${item.name}`}>Click here</NavLink></p> 
+                                    <p><NavLink to={`/${item.type}/${item.name}` } onClick={handleDetails}>Click here</NavLink></p> 
                                 </div>
                         }
                 
-                </div>))
-                
+                    </div>)
+                )
             }
+
+            {fullDetails && <AnimalDetails close={setFullDetails}/>}
         </div>
     )
 }

@@ -24,7 +24,7 @@ import MainContent from "../../components/MainContent";
 import { AnimalName } from "../../data/data";
 import { mammalsContent, birdsContent, reptilesContent } from "../../data/data";
 
-const AnimalPage = ({ animalClick, description, details }) => {
+const AnimalPage = ({ animalClick, description, details , longDescription }) => {
   const { type } = useParams(); 
 
   const contentMap = {
@@ -41,7 +41,11 @@ const AnimalPage = ({ animalClick, description, details }) => {
     <div className="container">
        <div className="main_content">
       <Sidebar animalName={sidebarName} animalNameClick={animalClick} />
-      <MainContent animalDescription={description} animalDetails={details} contentArray={content} />
+      <MainContent animalDescription={description} 
+                    animalDetails={details} 
+                    contentArray={content} 
+                    animalFullDetails = {longDescription}
+      />
     </div>
     </div>
   );

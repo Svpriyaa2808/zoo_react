@@ -26,5 +26,13 @@ To hide welcome message
 
 To make class Active and remove active when it is clicked again
        create state in sidebar 
-       const [classActive,setClassActive] = useState(null)
-       In onClick function set the class active "setClassActive(classActive === item ? null : item)"
+       const [classActive,setClassActive] = useState("inactive)
+       In onClick function set the class active "setClassActive(classActive === "active" ? "inactive" : "active")"
+
+
+To show animal full details 
+       Create component AnimalDetails 
+       create Nested dynamic routing
+       create state in App.jsx
+              const [showFullDetails,setShowFullDetails] = useState(null)
+              pass this state in Route and Main Component

@@ -1,5 +1,3 @@
-import Sidebar from "../components/Sidebar";
-
 function Animal(type, name, length, weight, lifespan, food, description, found, image,icon) {
     this.type = type; // Added type to distinguish between all animals
     this.name = name;
