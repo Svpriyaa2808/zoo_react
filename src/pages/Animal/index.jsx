@@ -17,14 +17,15 @@
 
 // export default AnimalPage
 
-
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Sidebar from "../../components/Sidebar";
 import MainContent from "../../components/MainContent";
 import { AnimalName } from "../../data/data";
 import { mammalsContent, birdsContent, reptilesContent } from "../../data/data";
+import styles from './animalPage.module.css'
 
-const AnimalPage = ({ animalClick, description, details , longDescription }) => {
+const AnimalPage = ({ animalClick, description, details , animalFullDetails }) => {
   const { type } = useParams(); 
 
   const contentMap = {
@@ -39,12 +40,12 @@ const AnimalPage = ({ animalClick, description, details , longDescription }) => 
 
   return (
     <div className="container">
-       <div className="main_content">
+       <div className={`${styles.main_content} ${styles[animalFullDetails]}`}>
       <Sidebar animalName={sidebarName} animalNameClick={animalClick} />
       <MainContent animalDescription={description} 
                     animalDetails={details} 
                     contentArray={content} 
-                    animalFullDetails = {longDescription}
+                    longDescription={animalFullDetails}
       />
     </div>
     </div>

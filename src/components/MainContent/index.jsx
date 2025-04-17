@@ -5,20 +5,13 @@ import { NavLink , useLocation} from 'react-router-dom'
 import AnimalFullDetails from '../AnimalFullDetails'
 import AnimalDetails from '../../pages/AnimalDetails'
 
-const MainContent = ({animalDescription,animalDetails,contentArray}) => {
+const MainContent = ({animalDescription,animalDetails,contentArray,longDescription}) => {
     const [showShortDescription,setShowShortDescription] = useState(null)
-    const [fullDetails,setFullDetails] = useState(null)
+    
     console.log(contentArray)
-
     const handleClick = () => {
         setShowShortDescription(null)
         animalDescription(null)
-    }
-
-    const handleDetails = () => {
-        setFullDetails("show")
-        
-        
     }
 
     useEffect(()=> {
@@ -49,7 +42,7 @@ const MainContent = ({animalDescription,animalDetails,contentArray}) => {
                                     <p><NavLink to={`/${item.type}`} onClick={handleClick}> visit {item.type} Page</NavLink></p>
                                     </div>
                                 : <div className={styles.link}>To know about {item.name}
-                                    <p><NavLink to={`/${item.type}/${item.name}` } onClick={handleDetails}>Click here</NavLink></p> 
+                                    <p><NavLink to={`/${item.type}/${item.name}`} onClick={longDescription} >Click here</NavLink></p> 
                                 </div>
                         }
                 
@@ -57,7 +50,6 @@ const MainContent = ({animalDescription,animalDetails,contentArray}) => {
                 )
             }
 
-            {fullDetails && <AnimalDetails close={setFullDetails}/>}
         </div>
     )
 }

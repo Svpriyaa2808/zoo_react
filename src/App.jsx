@@ -9,15 +9,17 @@ import {homeContent,AnimalShortDescription,AnimalName} from "./data/data"
 function App() {
 
   const [showDescription,setShowDescription] = useState(null)
-  
+  const [fullDetails,setFullDetails] = useState(null)
     
   const handleClick = (item) => {
       setShowDescription(showDescription === item ? null : item)
   }
 
- 
+  const handleDetails = () => {
+    setFullDetails("show")
+  }
 
-    return (
+  return (
     <>
     
       <Routes>
@@ -32,20 +34,20 @@ function App() {
           path="/:type"
           element={
             <AnimalPage
-              animalClick={handleClick}
-              description={showDescription}
-              details={AnimalShortDescription(showDescription)}
-             
+                animalClick={handleClick}
+                description={showDescription}
+                details={AnimalShortDescription(showDescription)}
+                animalFullDetails={handleDetails}
             />
           }
         />
       
-
+    
       <Route
       path="/:type/:animal"
-      element={<AnimalDetails  />}  
+      element={<AnimalDetails />}  
       />
-       
+        
        </Route> 
       </Routes>
     </>
@@ -53,3 +55,6 @@ function App() {
 }
 
 export default App
+
+
+
