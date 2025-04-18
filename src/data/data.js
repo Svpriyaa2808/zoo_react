@@ -136,6 +136,10 @@ export const AnimalShortDescription = (animal) => {
     return (allAnimals.filter(item => item === animal))
 }
 
+export const AnimalFullDescription = (animalName) => {
+    return (allAnimals.filter(item => item.name === animalName))
+}
+
 export const AnimalName = (type) => {
     if(type === null ) {
         return (allAnimals.map(item => item))
@@ -146,3 +150,4 @@ export const AnimalName = (type) => {
 }
 
 console.log(AnimalName("Mammals"))
+console.log(AnimalFullDescription("Echidna"))

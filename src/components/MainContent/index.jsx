@@ -5,7 +5,7 @@ import { NavLink , useLocation} from 'react-router-dom'
 import AnimalFullDetails from '../AnimalFullDetails'
 import AnimalDetails from '../../pages/AnimalDetails'
 
-const MainContent = ({animalDescription,animalDetails,contentArray,longDescription}) => {
+const MainContent = ({animalDescription,animalDetails,contentArray}) => {
     const [showShortDescription,setShowShortDescription] = useState(null)
     
     console.log(contentArray)
@@ -42,7 +42,7 @@ const MainContent = ({animalDescription,animalDetails,contentArray,longDescripti
                                     <p><NavLink to={`/${item.type}`} onClick={handleClick}> visit {item.type} Page</NavLink></p>
                                     </div>
                                 : <div className={styles.link}>To know about {item.name}
-                                    <p><NavLink to={`/${item.type}/${item.name}`} onClick={longDescription} >Click here</NavLink></p> 
+                                    <p><NavLink to={`/${item.type}/${item.name}`}>Click here</NavLink></p> 
                                 </div>
                         }
                 

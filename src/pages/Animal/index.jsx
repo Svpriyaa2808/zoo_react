@@ -25,7 +25,7 @@ import { AnimalName } from "../../data/data";
 import { mammalsContent, birdsContent, reptilesContent } from "../../data/data";
 import styles from './animalPage.module.css'
 
-const AnimalPage = ({ animalClick, description, details , animalFullDetails }) => {
+const AnimalPage = ({ animalClick, description, details }) => {
   const { type } = useParams(); 
 
   const contentMap = {
@@ -40,12 +40,11 @@ const AnimalPage = ({ animalClick, description, details , animalFullDetails }) =
 
   return (
     <div className="container">
-       <div className={`${styles.main_content} ${styles[animalFullDetails]}`}>
+       <div className={`${styles.main_content}`}>
       <Sidebar animalName={sidebarName} animalNameClick={animalClick} />
       <MainContent animalDescription={description} 
                     animalDetails={details} 
                     contentArray={content} 
-                    longDescription={animalFullDetails}
       />
     </div>
     </div>
