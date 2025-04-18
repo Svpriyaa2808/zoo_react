@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import * as motion from "motion/react-client"
 import {XCircle} from '@phosphor-icons/react'
 import styles from './animaldetails.module.css'
-import { getIconUrl } from "../../utils/function"
+import { getImageUrl } from "../../utils/function"
 import { AnimalFullDescription } from "../../data/data"
 
 const AnimalDetails = () => {
@@ -22,14 +22,14 @@ const AnimalDetails = () => {
         <motion.div className={styles.details_container}>
             {AnimalDisplayed.map((item,index)=>
             <div key={index} className={styles.full_details_container}>
-                <h2 >{item.name}</h2>
-                <img src={getIconUrl(item.icon)}></img>
-                <p>Length : {item.length} </p>
-                <p>Weight : {item.weight} </p>
-                <p>LifeSpan : {item.lifespan} </p>
-                <p>Food : {item.food} </p>
-                <p>Found : {item.found} </p>
-                <p>About {item.name} : {item.description} </p>
+                <h2 className={styles.heading}>{item.name}</h2>
+                <img src={getImageUrl(item.image)} alt={item.name}></img>
+                <p className={styles.description}>About {item.name} : {item.description} </p>
+                <p className={styles.details}>Length : {item.length} </p>
+                <p className={styles.details}>Weight : {item.weight} kg </p>
+                <p className={styles.details}>LifeSpan : {item.lifespan} </p>
+                <p className={styles.details}>Food : {item.food} </p>
+                <p className={styles.details}>Found : {item.found} </p>
             </div>)}
         
         </motion.div>

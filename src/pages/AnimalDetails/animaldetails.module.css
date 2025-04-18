@@ -1,21 +1,63 @@
 .animal_details {
-    position: relative;  
+    position: relative; 
+    background-color: bisque; 
 }
 
-.details_container {
-  
-  margin: 48px;
+.details_container { 
+  margin: 16px 15%;
   background-image: url('../../assets/main_bg.jpeg');
   opacity: 0;
 	transform: scale(0);
 	animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.full_details_container {
+  margin: 16px;
+  padding: 8px;
+  text-align: center;
+}
+
+.full_details_container img {
+  width: 50%;
+  height: auto;
+  box-shadow: 2px 2px 2px 2px;
+  border-radius: 25px;
+}
+
+.heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+ 
+}
+
+.description {
+  text-indent: 50px;
+  color: white;
+  text-align: justify;
+  margin: 32px;
+  font-size: 18px;
+}
+
+.details {
+  color: white;
+  font-size: 18px;
+  text-align: left;
+  margin-left: 40%;
 }
 
 .close {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 17%;
   cursor: pointer;
+}
+
+.close svg {
+  fill: white;
+  border-radius: 25px;
 }
 
 @keyframes popIn {
