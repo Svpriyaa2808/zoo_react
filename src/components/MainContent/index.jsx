@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react'
 import styles from './mainContent.module.css'
 import { getIconUrl } from '../../utils/function'
 import { NavLink , useLocation} from 'react-router-dom'
+import AnimalFullDetails from '../AnimalFullDetails'
+import AnimalDetails from '../../pages/AnimalDetails'
 
 const MainContent = ({animalDescription,animalDetails,contentArray}) => {
     const [showShortDescription,setShowShortDescription] = useState(null)
+    
     console.log(contentArray)
-
     const handleClick = () => {
         setShowShortDescription(null)
         animalDescription(null)
@@ -44,9 +46,10 @@ const MainContent = ({animalDescription,animalDetails,contentArray}) => {
                                 </div>
                         }
                 
-                </div>))
-                
+                    </div>)
+                )
             }
+
         </div>
     )
 }

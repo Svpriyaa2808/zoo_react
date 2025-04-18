@@ -5,3 +5,4 @@ want to change NavLink in main component - completed
 
 usepackages to show animal full details
 menu icon and mobile nav and mediaquery for header
+fix animaldetails page want to align and display the content
