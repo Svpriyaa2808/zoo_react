@@ -1,16 +1,17 @@
 .animal_details {
     position: relative; 
-    background-color: bisque; 
+    background-image: url('../../assets/main_bg.jpeg');
+   
 }
 
 .details_container { 
-  margin: 16px 15%;
-  background-image: url('../../assets/main_bg.jpeg');
-  opacity: 0;
+  margin: 32px 15%;
+  background-image: url('../../assets/green_plant.jpg');
+  color: black;
 	transform: scale(0);
 	animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.2);
-
+  
 }
 
 .full_details_container {
@@ -25,39 +26,82 @@
   box-shadow: 2px 2px 2px 2px;
   border-radius: 25px;
 }
-
 .heading {
+  display: flex;
+  margin: 0;
+}
+
+.title {
   font-size: 2rem;
   text-transform: uppercase;
-  color: white;
- 
-}
-
-.description {
-  text-indent: 50px;
-  color: white;
-  text-align: justify;
-  margin: 32px;
-  font-size: 18px;
-}
-
-.details {
-  color: white;
-  font-size: 18px;
+  color:  #036331;
+  flex: 1 0 80%;
   text-align: left;
-  margin-left: 40%;
 }
 
 .close {
-  position: absolute;
-  top: 20px;
-  right: 17%;
+  flex: 1 0 20%;
   cursor: pointer;
+  text-align: end;
 }
 
 .close svg {
-  fill: white;
-  border-radius: 25px;
+  fill:  #036331; 
+}
+
+.description h4{
+ font-size: 24px;
+ text-align: left;
+ margin-bottom: 8px;
+}
+
+.description p {
+  text-indent: 50px;
+  text-align: justify;
+  margin: 32px;
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.details_div h4 {
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.details { 
+  text-indent: 30px;
+  font-size: 18px;
+  /* text-align: left;
+  margin-left: 40%; */
+  text-align: left;
+  margin-top: 0;
+}
+
+@media  screen and (max-width:700px) {
+
+  .title {
+    font-size: 1rem;
+  }
+  
+}
+
+@media screen and (max-width:500px) {
+
+  .full_details_container img {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+
+  .close svg {
+    width: 24px;
+  }
+  
 }
 
 @keyframes popIn {
