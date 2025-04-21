@@ -17,6 +17,10 @@
     display: none;
 }
 
+.footer_nav {
+    color: white;
+}
+
 @media screen and (max-width:800px) {
 
     .desktop_menu {
