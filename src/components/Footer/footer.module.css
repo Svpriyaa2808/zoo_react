@@ -90,7 +90,7 @@
     width: 200px;
     height: 40px;
     font-weight: bold;
-   position: absolute;
+    position: absolute;
     top: 30%;
     left: 45%;
     text-align: center;
@@ -162,6 +162,90 @@
     width: 32px;
 }
 
+@media screen and (max-width:800px) {
+    .logo_container img {
+        width: 25%;
+        height: auto;
+    }
 
+    .map  img{
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .park {
+        top: 28%;
+        left: 40%;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    .footer {
+        margin-top: 0;
+        background-image: url('../../assets/footer_bg.jpeg');
+        background-size: cover; 
+        background-position: top;
+        height: 1000px;
+    }
+
+    .logo_container img {
+        width: 50%;
+        height: auto;
+    }
+
+    .additional_link_list {
+        list-style: none;
+        display: block;
+        justify-content: center;
+    }
+    
+    .additional_link {
+        margin: 8px;
+    }
+
+    .contact_info {
+        flex-wrap: wrap;
+    }
+
+    .visit_us {
+        flex-basis: 30%;
+    }
+
+    .news_letter {
+        flex-basis: 100%;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .logo_container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .park {
+        
+        top: 10%;
+        left: 25%;
+    }
+
+    .contact_info {
+        flex-direction: column;
+    }
+
+    .contact {
+        text-align: center;
+        border-bottom: 1px solid white;
+        order: 1;
+    }
+
+    .visit_us {
+        border-bottom: 1px solid white;
+    }
+    
+}
 
 

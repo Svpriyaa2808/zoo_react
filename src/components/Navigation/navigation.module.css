@@ -72,4 +72,8 @@
         width: 75%;
         height: auto;
     }
+
+    .footer_nav_menu {
+        display: block;
+    }
 }
