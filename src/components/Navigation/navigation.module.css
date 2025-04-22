@@ -17,8 +17,12 @@
     display: none;
 }
 
-.footer_nav {
-    color: white;
+.footer_nav_menu {
+    text-decoration: none;
+    color: #373D20;
+    font-size: 24px;
+    margin: 8px 16px;
+    font-weight: bold;
 }
 
 @media screen and (max-width:800px) {
