@@ -193,3 +193,22 @@ export const AnimalName = (type) => {
 
 console.log(AnimalName("Mammals"))
 console.log(AnimalFullDescription("Echidna"))
+
+function SliderImage (name,image) {
+    this.name = name,
+    this.image = image
+}
+
+export const ImageSlide = [
+    new SliderImage("Echidna", "echidna.jpg"),
+    new SliderImage("Echidna", "echidna_1.jpg"),
+    new SliderImage("Echidna", "echidna_2.jpg"),
+    new SliderImage("Echidna", "echidna_3.jpg"),
+    new SliderImage("Tasmanian Devil","tasmanian-devil.jpg")
+]
+
+export const ImageForSlider = (AnimalFullDescription) => {
+   return ImageSlide.filter(item => item.name === AnimalFullDescription)
+}
+
+console.log(ImageForSlider("Echidna"))

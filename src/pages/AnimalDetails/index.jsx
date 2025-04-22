@@ -4,6 +4,7 @@ import {XCircle} from '@phosphor-icons/react'
 import styles from './animaldetails.module.css'
 import { getImageUrl } from "../../utils/function"
 import { AnimalFullDescription } from "../../data/data"
+import Slider from "../../components/Slider"
 
 const AnimalDetails = () => {
     
@@ -30,11 +31,15 @@ const AnimalDetails = () => {
                             <XCircle size={38} />
                         </div>
                     </div>
-                    <img src={getImageUrl(item.image)} alt={item.name}></img>
+                    {/* <img src={getImageUrl(item.image)} alt={item.name}></img> */}
+                    <div className={styles.slider}>
+                    <Slider animalName={animal}/>
+                    </div>
                     <div className={styles.description}>
                         <h4>About {item.name}</h4>
                         <p> {item.description} </p>
                     </div>
+            
                     <div className={styles.details_div}>
                         <h4>Features</h4>
                         <p className={styles.details}>Length : {item.length} cm</p>

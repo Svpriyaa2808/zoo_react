@@ -6,8 +6,9 @@ want to change NavLink in main component - completed
 usepackages to show animal full details-completed
 menu icon and mobile nav and mediaquery for header - completed
 fix animaldetails page want to align and display the content - completed
-footer - add some details and contact info and install social media packages 
-align properly
-media query for footer
+footer - add some details and contact info and install social media packages - completed
+align properly - completed
+media query for footer - completed
+some content for home page
 swiper 
 code alignment
