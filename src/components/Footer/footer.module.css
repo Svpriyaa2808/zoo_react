@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
+.footer {
+    margin-top: 0;
+    background-image: url('../../assets/footer_bg.jpeg');
+    background-size: cover; 
+    background-position: center;
+    height: 800px;
+}
+
+.footer_content {
+    margin-top: 56px;
+    padding-top: 32px;
+    text-align: center;
+}
+
+.logo_container {
+    margin-top: 64px;
+    padding: 64px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_container img {
+    width: 15%;
+    height: auto;
+}
+
+.page_title {
+    color: #036331;
+    font-family: "Fascinate", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.4rem;
+    margin-top: 0;
+}
+
+.footer_nav {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_divider {
+    height: 1px;
+    background-color: white;
+    margin: 8px 20%;
+}
+
+.additional_link_list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.additional_link {
+    margin: 8px;
+    margin-bottom: 32px;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer_background {
+    /* margin-top: 32px; */
+    margin-bottom: 0;
+    position: relative;
+    background-image: linear-gradient(#3f8176, #254741);    
+}
+
+.map {
+    padding: 32px;
+    margin-top: 32px;
+    text-align: center;
+}
+
+.map  img{
+    width: 50%;
+    height: auto;
+    position: relative;
+}
+
+.park {
+    background-color: white;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    text-align: center;
+}
+
+.park p {
+    margin: 8px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contact_info {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.contact {
+    flex-basis: 40%;
+    margin: 16px;
+    text-align: justify;
+}
+
+.contact h3 {
+    font-size: 22px;
+}
+
+.visit_us {
+    flex-basis: 20%;
+    margin: 16px;
+    font-size: 20px;
+}
+
+.news_letter {
+    flex-basis: 40%;
+    margin: 16px;
+    /* margin-top: 32px;
+    margin-right: 32px; */
+    font-size: 20px;
+    align-content: center;
+    justify-content: center;
+}
+
+.input {
+    height: 40px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.button {
+    background-color:  #B8D35D;
+    height: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+}
+
+.social_media p {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    text-align: center;
+}
+
+.social_media svg {
+    fill: white;
+    width: 32px;
+}
+
+@media screen and (max-width:800px) {
+    .logo_container img {
+        width: 25%;
+        height: auto;
+    }
+
+    .map  img{
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .park {
+        top: 28%;
+        left: 40%;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    .footer {
+        margin-top: 0;
+        background-image: url('../../assets/footer_bg.jpeg');
+        background-size: cover; 
+        background-position: top;
+        height: 1000px;
+    }
+
+    .logo_container img {
+        width: 50%;
+        height: auto;
+    }
+
+    .additional_link_list {
+        list-style: none;
+        display: block;
+        justify-content: center;
+    }
+    
+    .additional_link {
+        margin: 8px;
+    }
+
+    .contact_info {
+        flex-wrap: wrap;
+    }
+
+    .visit_us {
+        flex-basis: 30%;
+    }
+
+    .news_letter {
+        flex-basis: 100%;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .logo_container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .park {
+        
+        top: 10%;
+        left: 25%;
+    }
+
+    .contact_info {
+        flex-direction: column;
+    }
+
+    .contact {
+        text-align: center;
+        border-bottom: 1px solid white;
+        order: 1;
+    }
+
+    .visit_us {
+        border-bottom: 1px solid white;
+    }
+    
+}
+
+

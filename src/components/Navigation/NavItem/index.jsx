@@ -4,7 +4,7 @@ import styles from '../../Navigation/navigation.module.css'
 const NavItem = ({name,welcomeMessage}) => {
     return (
         
-        <NavLink to={name === "Home" ? '/' : name} className={styles.nav_menu} onClick={()=>welcomeMessage(null)}>{name}</NavLink>
+        <NavLink to={name === "Home" ? '/' : name} className={styles.nav_menu}  onClick={()=>welcomeMessage(null)}>{name}</NavLink>
     )
 }
 

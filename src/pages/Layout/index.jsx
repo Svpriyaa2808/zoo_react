@@ -1,6 +1,6 @@
-import { useState } from "react";
 import Header from "../../components/Header";
 import { Outlet } from "react-router-dom";
+import Footer from "../../components/Footer";
 
 const Layout = ({animalClick}) => {
     // const [showDescription,setShowDescription] = useState(null)
@@ -20,7 +20,7 @@ const Layout = ({animalClick}) => {
             </div>
             </div> */}
             <Outlet />
-            
+            <Footer animalDes={animalClick}/>
         </>
     )
 }
