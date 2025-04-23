@@ -1,7 +1,6 @@
 .animal_details {
-    position: relative; 
-    background-image: url('../../assets/main_bg.jpeg');
-   
+  position: relative; 
+  background-image: url('../../assets/main_bg.jpeg');
 }
 
 .details_container { 
@@ -10,8 +9,7 @@
   color: black;
 	transform: scale(0);
 	animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.2);
-  
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.2);  
 }
 
 .full_details_container {
@@ -26,6 +24,7 @@
   box-shadow: 2px 2px 2px 2px;
   border-radius: 25px;
 }
+
 .heading {
   display: flex;
   margin: 0;
@@ -50,9 +49,9 @@
 }
 
 .description h4{
- font-size: 24px;
- text-align: left;
- margin-bottom: 8px;
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 8px;
 }
 
 .description p {
