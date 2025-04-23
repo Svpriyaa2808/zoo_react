@@ -3,3 +3,9 @@
     height: 500px;
     border-radius: 25px;
 }
+
+.rsis-image {
+    width: 50%;
+    height: auto;
+}
+

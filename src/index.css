@@ -31,6 +31,17 @@ body {
   background-repeat: no-repeat;
 }
 
+.rsis-image {
+  width: 50%;
+  height: auto;
+}
+
+:global(.react-simple-image-slider img) {
+  width: 800px;     /* or set a fixed width like 800px */
+  height: 400px;    /* or set a fixed height like 400px */
+ 
+}
+
 @media screen and (max-width:700px) {
 
   .main_content {
@@ -38,5 +49,12 @@ body {
     position: relative;
   }
   
+}
+
+@media screen and (max-width:600px) {
+  .rsis-image {
+    width: 100%;
+    height: auto;
+  }
 }
 

@@ -200,7 +200,7 @@ function SliderImage (name,image) {
 }
 
 export const ImageSlide = [
-    new SliderImage("Echidna", "echidna.jpg"),
+    new SliderImage("Echidna", "echidnaa.jpg"),
     new SliderImage("Echidna", "echidna_1.jpg"),
     new SliderImage("Echidna", "echidna_2.jpg"),
     new SliderImage("Echidna", "echidna_3.jpg"),

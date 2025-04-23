@@ -21,7 +21,7 @@ const Slider = ({animalName}) => {
           images={Images}
           showBullets={true}
           showNavs={true}
-          autoPlay={true}
+          autoPlay={false}
         />
       
     )
