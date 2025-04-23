@@ -1,3 +1,4 @@
+import HomeDetail from "../../components/HomeDetails"
 import MainContent from "../../components/MainContent"
 import Sidebar from "../../components/Sidebar"
 
@@ -11,6 +12,7 @@ const Home = ({content,animalClick,description,details,sidebarName}) => {
                     <Sidebar animalName={sidebarName} animalNameClick={animalClick}/>
                     <MainContent contentArray={content} animalDescription={description} animalDetails={details}/>
                 </div>
+                <HomeDetail />
             </div>
         </>
     )
