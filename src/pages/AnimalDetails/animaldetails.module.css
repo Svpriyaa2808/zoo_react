@@ -1,6 +1,6 @@
 .animal_details {
   position: relative; 
-  background-image: url('../../assets/main_bg.jpeg');
+  background-image: linear-gradient(#3f8176, #254741);  
 }
 
 .details_container { 
