@@ -1,5 +1,5 @@
 .sidebar {
-   margin: 0;
+    margin: 0;
     flex-basis: 25%;
     box-shadow: 10px -2px 5px 0px rgba(0,0,0,0.75);
     padding: 16px;
@@ -19,6 +19,7 @@
 
 .animal_name {
     margin: 8px 16px;
+    padding: 8px;
     font-size: 1.2rem;
     margin-left: 48px;
     font-weight: 700;
@@ -34,7 +35,7 @@
     opacity: 1;
     color: white;
     border-radius: 10px;
-    max-height: 50px;
+    min-height: 50px;
     margin: 8px;
     box-shadow: 2px 2px 2px 2px;
 }
@@ -53,7 +54,7 @@
 
     .sidebar_menu {
         border-bottom: 2px solid white;
-        min-height: 60px;
+        min-height: 70px;
     }
 
     .animal_name {
