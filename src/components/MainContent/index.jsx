@@ -38,11 +38,11 @@ const MainContent = ({animalDescription,animalDetails,contentArray}) => {
                         <p className={styles.animal_description}>{item.description.length > 200 ? item.description.slice(0,200) + "...." : item.description}</p>
                         
                         {isHome  ? <div className={styles.link}>To Know about more {item.type} 
-                                    <p><NavLink to={`/${item.type}`} onClick={handleClick}> visit {item.type} Page</NavLink></p>
+                                        <p><NavLink to={`/${item.type}`} onClick={handleClick}> visit {item.type} Page</NavLink></p>
                                     </div>
-                                : <div className={styles.link}>To know about {item.name}
-                                    <p><NavLink to={`/${item.type}/${item.name}`}>Click here</NavLink></p> 
-                                </div>
+                                :   <div className={styles.link}>To know about {item.name}
+                                        <p><NavLink to={`/${item.type}/${item.name}`}>Click here</NavLink></p> 
+                                    </div>
                         }
                 
                     </div>)

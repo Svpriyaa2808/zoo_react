@@ -11,19 +11,16 @@ const MobileNavigation = () => {
     const handleMenu = () => {
         setShowNav(showNav === "active" ? "inactive" : "active")
     }
-
-
     return (
         <>
         <div className={styles.hamburger_menu}  >
             <img src={MenuIcon} alt='Menu_icon' onClick={handleMenu}></img> 
-
             <div className={`${styles.mobile_menu} ${styles[showNav]}`}>
-            <NavItem name="Home" />
-            {Categories.map((item,index) => <NavItem key={index} name={item} />)}
+                <NavItem name="Home" />
+                {Categories.map((item,index) => <NavItem key={index} name={item} />)}
             </div>           
         </div>
-    </>
+        </>
     )
 }
 

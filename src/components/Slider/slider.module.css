@@ -1,0 +1,43 @@
+.slider_container {
+    position: relative; 
+    margin: 20px auto; 
+    width: 800px;  
+    padding: 8px;  
+    height: 600px;      
+}
+
+.slider_container img {
+    width: 50%;
+    height: auto;
+}
+
+@media screen and (max-width:800px) {
+    .slider_container {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .slider_container {
+        width: 500px;
+        height: 300px;
+        margin: 16px 8px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .slider_container {
+        width: 400px ;
+        height: 350px;
+    }
+    
+}
+
+@media screen and (max-width:400px) {
+    .slider_container {
+        width: 350px;
+        height: 250px;
+    }    
+}
+   

@@ -8,8 +8,7 @@
 .sidebar_menu {
     display: flex;
     color: white;
-    cursor: pointer;
-    
+    cursor: pointer;    
 }
 
 .animal_icon {

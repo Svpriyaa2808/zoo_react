@@ -15,6 +15,10 @@ create state in App.jsx to show description when it is clicked
                        -> Maincontent
        in sidebar create Onclick function and set setShowDescription(item)
 
+To display corresponding page content 
+        path="/:type"- dynamic routing
+        In Animal Page useParams() and match the "type" and display the content
+
 To hide welcome message 
        create state in Maincontnet
        const [showShortDescription,setShowShortDescription] = useState(null)
@@ -23,6 +27,9 @@ To hide welcome message
          useEffect(()=> {
         setShowShortDescription(variable that holding sidebar state)
        },[variable that holding sidebar state])
+
+       when the animal short description is displayed if it is homepage link "/:type/"
+                                                      if it is animal(mammal) Page link - "/:type/:animal" - onclick takes to animaldetails component
 
 To make class Active and remove active when it is clicked again
        create state in sidebar 
@@ -33,6 +40,9 @@ To make class Active and remove active when it is clicked again
 To show animal full details 
        Create component AnimalDetails 
        create Nested dynamic routing
-       create state in App.jsx
-              const [showFullDetails,setShowFullDetails] = useState(null)
-              pass this state in Route and Main Component
+               path="/:type/:animal"
+               use motion.div package to popup the animal full details
+
+To Close the animaldetails
+       use phosporicon close button 
+       button onclick - useNavigate("type") will return "/:type/:animal" to "/type" (previous page)
