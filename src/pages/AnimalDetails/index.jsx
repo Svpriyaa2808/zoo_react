@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams, useLocation } from "react-router-dom"
 import * as motion from "motion/react-client"
 import {XCircle} from '@phosphor-icons/react'
 import styles from './animaldetails.module.css'
@@ -9,10 +9,9 @@ const AnimalDetails = () => {
     
     const { type, animal } = useParams()
     const navigate = useNavigate()
-  
-    const handleClose = () => {
-        navigate(`/${type}`)
-    }
+    const location = useLocation();
+const from = location.state?.from || "/";
+const handleClose = () => navigate(from);
     
     console.log(animal)
      const AnimalDisplayed = AnimalFullDescription(animal)

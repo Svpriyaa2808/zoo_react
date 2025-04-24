@@ -11,6 +11,10 @@ function App() {
   const [showDescription,setShowDescription] = useState(null)
   const [classActive,setClassActive] = useState(null)
 
+  const handleActive = () => {
+    setClassActive(classActive === item ? null : item)
+  }
+
   const handleClick = (item) => {
       setShowDescription(showDescription === item ? null : item)
   }
@@ -25,25 +29,17 @@ function App() {
           <Route path='/' element={<Home content={homeContent} animalClick={handleClick}
                                         sidebarName={AnimalName(null)} 
                                         description={showDescription} 
-                                        details={AnimalShortDescription(showDescription)}/>}>
+                                        details={AnimalShortDescription(showDescription)}
+                                        setActive={setClassActive} 
+                                        animalNameActive={classActive}/>}>
           </Route>
 
-          <Route
-            path="/:type"
-            element={
-              <AnimalPage
-                  animalClick={handleClick}
-                  description={showDescription}
-                  details={AnimalShortDescription(showDescription)}
-                  setActive={setClassActive} animalNameActive={classActive}
-              />
-            }
+          <Route path="/:type" element={<AnimalPage animalClick={handleClick}
+                                                    description={showDescription}
+                                                    details={AnimalShortDescription(showDescription)}
+                                                    setActive={setClassActive} animalNameActive={classActive} />}
           />
-          <Route
-            path="/:type/:animal"
-            element={<AnimalDetails />}  
-          />
-          
+          <Route path="/:type/:animal" element={<AnimalDetails />}  /> 
         </Route> 
       </Routes>
     </>

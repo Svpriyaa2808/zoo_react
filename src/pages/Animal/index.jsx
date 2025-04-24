@@ -22,13 +22,9 @@ const AnimalPage = ({ animalClick, description, details,setActive, animalNameAct
  
   return (
     <div className="container">
-       <div className="main_content">
-        <Sidebar animalName={sidebarName} animalNameClick={animalClick} activeClass={setActive} animalNameActive={animalNameActive} />
-        <MainContent animalDescription={description} 
-                      animalDetails={details} 
-                      contentArray={content} 
-                      activeClass={setActive} animalNameActive={animalNameActive}
-        />
+      <div className="main_content">
+        <Sidebar animalName={sidebarName} animalNameClick={animalClick} activeClass={setActive} animalActive={animalNameActive} />
+        <MainContent animalDescription={description} animalDetails={details} contentArray={content} />
       </div>
       <Slider imageArray={sidebarName}/>
     </div>

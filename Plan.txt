@@ -20,15 +20,9 @@ To display corresponding page content
         In Animal Page useParams() and match the "type" and display the content
 
 To hide welcome message 
-       create state in Maincontnet
-       const [showShortDescription,setShowShortDescription] = useState(null)
-       
-       useEffect is used when sidebar state gets value
-         useEffect(()=> {
-        setShowShortDescription(variable that holding sidebar state)
-       },[variable that holding sidebar state])
-
-       when the animal short description is displayed if it is homepage link "/:type/"
+       sidebar is clicked const [showDescription,setShowDescription] = useState(null) gets value and short description is displayed
+       when the animal short description is displayed if it is homepage link "/:type/", - onclick takes to group page
+                                                                             "/:type/:animal" - onclick takes to animaldetails component
                                                       if it is animal(mammal) Page link - "/:type/:animal" - onclick takes to animaldetails component
 
 To make class Active and remove active when it is clicked again
