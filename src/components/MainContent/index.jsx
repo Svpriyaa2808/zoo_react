@@ -39,11 +39,19 @@ const MainContent = ({animalDescription,animalDetails,contentArray,activeClass,a
                         <h3 className={styles.animal_name}>{item.name}</h3>
                         <img className={styles.animal_icon} src={getIconUrl(item.icon)} alt={item.icon}></img>
                         <p className={styles.animal_description}>{item.description.length > 200 ? item.description.slice(0,200) + "...." : item.description}</p>
-                        
-                        {isHome  ? <div className={styles.link}>To Know about more {item.type} 
+                        <p className={styles.animal_description}><span>Food : </span>{item.food}</p>
+                        {isHome  ? 
+                                <>
+                                    <div className={styles.link}>To Know about more {item.type} 
                                         <p><NavLink to={`/${item.type}`} onClick={handleClick}> visit {item.type} Page</NavLink></p>
                                     </div>
-                                :   <div className={styles.link}>To know about {item.name}
+                                            
+                                    <div className={styles.link}>To know about {item.name}
+                                        <p><NavLink to={`/${item.type}/${item.name}`} onClick={handleNavigate}>Click here</NavLink></p> 
+                                    </div>  
+                                </>
+                                :   
+                                    <div className={styles.link}>To know about {item.name}
                                         <p><NavLink to={`/${item.type}/${item.name}`} onClick={handleNavigate}>Click here</NavLink></p> 
                                     </div>
                         }
