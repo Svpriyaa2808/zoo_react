@@ -9,10 +9,13 @@ import {homeContent,AnimalShortDescription,AnimalName} from "./data/data"
 function App() {
 
   const [showDescription,setShowDescription] = useState(null)
-      
+  const [classActive,setClassActive] = useState(null)
+
   const handleClick = (item) => {
       setShowDescription(showDescription === item ? null : item)
   }
+
+  
 
   return (
     <>    
@@ -32,6 +35,7 @@ function App() {
                   animalClick={handleClick}
                   description={showDescription}
                   details={AnimalShortDescription(showDescription)}
+                  setActive={setClassActive} animalNameActive={classActive}
               />
             }
           />

@@ -4,13 +4,16 @@ import { getIconUrl } from '../../utils/function'
 import { NavLink , useLocation} from 'react-router-dom'
 
 
-const MainContent = ({animalDescription,animalDetails,contentArray}) => {
+const MainContent = ({animalDescription,animalDetails,contentArray,activeClass,animalActive}) => {
     const [showShortDescription,setShowShortDescription] = useState(null)
-    
     console.log(contentArray)
+    
     const handleClick = () => {
-        setShowShortDescription(null)
         animalDescription(null)
+    }
+
+    const handleNavigate = (item) => {
+        activeClass(item)
     }
 
     useEffect(()=> {
@@ -41,7 +44,7 @@ const MainContent = ({animalDescription,animalDetails,contentArray}) => {
                                         <p><NavLink to={`/${item.type}`} onClick={handleClick}> visit {item.type} Page</NavLink></p>
                                     </div>
                                 :   <div className={styles.link}>To know about {item.name}
-                                        <p><NavLink to={`/${item.type}/${item.name}`}>Click here</NavLink></p> 
+                                        <p><NavLink to={`/${item.type}/${item.name}`} onClick={handleNavigate}>Click here</NavLink></p> 
                                     </div>
                         }
                 
