@@ -7,17 +7,17 @@ import MobileNavigation from '../Navigation/MobileNavigation'
 const Header = ({animalDes}) => {
     return (
         <>
-        <header className={styles.header}>
-            <div className={styles.title_section}>
-            <img className={styles.logo} src={logo}></img>
-            <h1 className={styles.page_title}>Nature's zoo</h1>
-            </div>
-            <div className={styles.navigation}>
-                <DesktopNavigation hideAnimalContent={animalDes}/>
-                <MobileNavigation />
-            </div>
-        </header>
-        <BannerArea />
+            <header className={styles.header}>
+                <div className={styles.title_section}>
+                    <img className={styles.logo} src={logo}></img>
+                    <h1 className={styles.page_title}>Nature's zoo</h1>
+                </div>
+                <div className={styles.navigation}>
+                    <DesktopNavigation hideAnimalContent={animalDes}/>
+                    <MobileNavigation />
+                </div>
+            </header>
+            <BannerArea />
         </>
     )
 }
